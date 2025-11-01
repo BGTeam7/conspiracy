@@ -1,38 +1,65 @@
 .App {
-  text-align: center;
-}
+  /* background-color: #231D4A; */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.level_border {
+  border: solid 30px;
+  border-image: url(./assets/levels_border.svg) 30;
+}
+.char_border {
+  border: solid 30px;
+  border-image: url(./assets/char_border.svg) 30;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.border {
+  background: 
+    linear-gradient(#ccc 0 0) padding-box, /*this is your grey background*/
+    linear-gradient(to right, #9c20aa, #fb3570) border-box;
+  color: #313149;
+  padding: 10px;
+  border: 5px solid transparent;
+  border-radius: 15px;
+  display: inline-block;
+  margin: 75px 0;
+}
+
+.gradient {
+  background: linear-gradient(180deg, rgba(57, 120, 252, 0.63) 0%, rgba(48, 68, 150, 0.857881) 30.77%, #2A2356 84.62%);
+}
+
+button {
+  background: linear-gradient(180deg, rgba(57, 120, 252, 0.63) 0%, rgba(48, 68, 150, 0.857881) 30.77%, #2A2356 84.62%);
+  backdrop-filter: blur(18.0401px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 0px 1rem;
+  color: white;
+  text-transform: uppercase;
+  padding: 1rem;
+  font-weight: 600;
+
+}
+
+progress {
+  border: solid #6ECBF5 2px;
+  width: 50%;
+  border-radius: 0 10px 10px 0;
+  background: none;
+}
+
+progress[value]::-webkit-progress-bar {
+  background: #6ECBF54d;
+  mix-blend-mode: overlay;
+}
+
+progress[value]::-webkit-progress-value {
+  background-color: #6ecaf543;
+  mix-blend-mode: overlay;
+}
+
+progress[value]::-moz-progress-bar {
+  background: #6ecaf54d;
+  border-radius: 0 50px 50px 0;
+  mix-blend-mode: lighten;
 }
