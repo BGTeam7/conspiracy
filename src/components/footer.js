@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 import { FaDiscord, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import logo_mini from "../assets/logo_mini.svg"
 
 const Footer = () => {
     return(
         <footer className="grid grid-cols-4 bg-[#111] text-gray-400 p-24 pt-14 mt-14">
             <div>
-                <div>logo stuff</div>
+                <img src={logo_mini}/>
                 <div className="flex gap-2 text-[#E372D6]">
                     <a href="https://www.paypal.com/donate/?hosted_button_id=RUGEY8J38GKU4"><FaXTwitter/></a>
                     <a href="https://pixelgamesstudio.org/"><FaInstagram/></a>

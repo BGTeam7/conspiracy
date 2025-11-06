@@ -15,6 +15,10 @@ body {
   background-position: center;
 }
 
+.trispace {
+  font-family: "Trispace", sans-serif;
+}
+
 h1, h2 {
   font-family: "Trispace", sans-serif;
 }
