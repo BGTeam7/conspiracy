@@ -52,7 +52,7 @@ const Home = () => {
                         <img className="scale-110 hover:scale-125 transition-transform" src={file}/>
                     </div>
                 </div>
-                <p className="text-2xl text-center mt-8">Description text for this section can go here. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                <p className="text-2xl text-center mt-8">Help Mingo find her family and friends, who are trapped in the pixels of some of your favorite video game levels! Explore new frontiers in your favorite universes, and break the fourth wall as you learn more about the mystery taht ties them together - will Mingo rescue all of her loved ones? Does she figure out what's happening in the end? Can she beat the Rainbow Road level? Only one way to find out!</p>
             </div>
         </section>
         <div className="flex justify-center">
@@ -97,8 +97,8 @@ const Home = () => {
                     </div>
                 </div>
                 <div className="flex">
-                    <p className="w-3/4 text-center text-2xl">Description text for this section can go here. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                    <img src={journal} className="w-auto"/>
+                    <p className="w-3/4 text-center text-2xl">To learn more about Mingo's story, click the journal icon over here! </p>
+                    <img src={journal} className="w-full"/>
                 </div>
             </div>
         </section>
