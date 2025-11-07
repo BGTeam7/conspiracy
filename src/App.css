@@ -68,7 +68,28 @@ progress[value]::-moz-progress-bar {
 
 .scanlines {
   background: repeating-linear-gradient(transparent, transparent 2px, black 3px, black 3px);
+  background-blend-mode: overlay;
   background-size: auto 100%;
   background-position: center center;
   opacity: 1;
+  position: relative
+}
+
+.scanlines:before {
+    display: block;
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    z-index: 2147483649;
+    background: rgba(0, 0, 0, 0.3);
+    opacity: 0.75;
+    animation: scanline 6s linear infinite;
+}
+
+@keyframes scanline {
+    0% {
+        transform: translate3d(0, 200000%, 0);
+    }
 }
