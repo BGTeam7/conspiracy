@@ -12,6 +12,8 @@ import { FaXbox, FaPlaystation } from "react-icons/fa6";
 import { SiEpicgames } from "react-icons/si";
 import DevTeam from "../data/dev";
 import Card from "../components/card";
+import pin from "../assets/pushpin-pink.png"
+import circuit from "../assets/pin_circuit.svg"
 
 const Home = () => {
     return(
@@ -22,18 +24,22 @@ const Home = () => {
         <section>
             <div>
                 <div className="flex gap-8 justify-center my-10">
-                    <button className="trispace text-2xl">coming soon on</button>
+                    <button className="trispace font-semibold text-2xl px-10">coming soon on</button>
                     <button><SiEpicgames size={36}/></button>
                     <button><FaXbox size={36}/></button>
                     <button><FaPlaystation size={36}/></button> 
                 </div>
-                <hr className="border-2 border-[#6ECBF5] border-solid w-1/3 absolute translate-x-[100%] -translate-y-20 -z-10"/>
+                <hr className="border-2 border-[#6ECBF5] border-solid w-1/3 absolute translate-x-[110%] -translate-y-20 -z-10"/>
             </div>
         </section>
         <section className="mx-8 md:mx-40 rounded-bl-2xl rounded-tr-2xl border-solid border-2 border-blue-300 bg-[rgba(57,119,252,0.15)]">
-            <h1 className="uppercase text-right text-5xl px-12 py-8 border-b-solid border-b-2 border-blue-300 gradient rounded-tr-2xl">
-                explore familiar worlds
-            </h1>
+            <div className="uppercase text-right text-5xl px-12 py-8 border-b-solid border-b-2 border-blue-300 gradient rounded-tr-2xl flex justify-between">
+                <div className="flex items-center">
+                    <img src={pin} className="w-12 scale-[2.5] mix-blend-screen -scale-x-[2.5] -translate-y-12"/>
+                    <img src={circuit} className="h-12 scale-[2] mix-blend-screen translate-y-6 -translate-x-3  -scale-x-[2]"/>
+                </div>
+                <h3>explore familiar worlds</h3>
+            </div>
             <div className="p-10">
                 <div className="flex gap-10">
                     <div className="level_border">
@@ -53,11 +59,15 @@ const Home = () => {
             <img src={connector} className="mix-blend-overlay self-center"/>
         </div>
         <section className="mx-8 md:mx-40 rounded-bl-2xl rounded-tr-2xl border-solid border-2 border-blue-300 bg-[rgba(57,119,252,0.15)]">
-            <h1 className="uppercase text-left text-5xl px-12 py-8 border-b-solid border-b-2 border-blue-300 gradient rounded-tr-2xl">
-                discover mingo's story
-            </h1>
+            <div className="uppercase text-right text-5xl px-12 py-8 border-b-solid border-b-2 border-blue-300 gradient rounded-tr-2xl flex justify-between">
+                <h3>discover mingo's story</h3>
+                <div className="flex items-center">
+                    <img src={circuit} className="h-12 scale-[2] mix-blend-screen translate-y-6 translate-x-3"/>
+                    <img src={pin} className="w-12 scale-[2.5] mix-blend-screen -translate-y-12"/>
+                </div>
+            </div>
             <div className="p-10 space-y-10">
-                <div className="flex gap-4 p-4 border-solid border-2 text-left border-purple-300">
+                <div className="flex gap-4 p-4 border-solid border-2 text-left rounded-tr-3xl border-purple-300">
                     <div className="w-full">
                         <img className="h-full w-auto" src={mingo}/>
                     </div>
@@ -66,7 +76,7 @@ const Home = () => {
                             <h1 className="uppercase opacity-100 trispace font-semibold text-3xl">mingo</h1>
                             <p className="text-xl">Flamingo-Human Hybrid</p>
                         </div>
-                        <div>
+                        <div className="space-y-4">
                             <div className="flex gap-2 items-center">
                                 <progress id="heart" value="32" max="100"> 32% </progress>
                                 <label className="uppercase font-semibold" for="heart"> stat#1</label>
@@ -96,9 +106,13 @@ const Home = () => {
             <img src={connector} className="mix-blend-overlay self-center -scale-x-100"/>
         </div>
         <section className="mx-8 md:mx-40 rounded-bl-2xl rounded-tr-2xl border-solid border-2 border-blue-300 bg-[rgba(57,119,252,0.15)]">
-            <h1 className="uppercase text-right text-5xl px-12 py-8 border-b-solid border-b-2 border-blue-300 gradient rounded-tr-2xl">
-                featured dev team
-            </h1>
+            <div className="uppercase text-right text-5xl px-12 py-8 border-b-solid border-b-2 border-blue-300 gradient rounded-tr-2xl flex justify-between">
+                <div className="flex items-center">
+                    <img src={pin} className="w-12 scale-[2.5] mix-blend-screen -scale-x-[2.5] -translate-y-12"/>
+                    <img src={circuit} className="h-12 scale-[2] mix-blend-screen translate-y-6 -translate-x-3  -scale-x-[2]"/>
+                </div>
+                <h3>featured dev team</h3>
+            </div>
             <div className="p-10">
                 <div className="flex justify-around gap-4">
                     {DevTeam.map((e) => {
@@ -113,25 +127,40 @@ const Home = () => {
             <img src={connector} className="mix-blend-overlay self-center"/>
         </div>
         <section className="mx-8 md:mx-40 rounded-bl-2xl rounded-tr-2xl border-solid border-2 border-blue-300 bg-[rgba(57,119,252,0.15)]">
-            <h1 className="uppercase text-left text-5xl px-12 py-8 border-b-solid border-b-2 border-blue-300 gradient rounded-tr-2xl">
-                our partners
-            </h1>
-            <div className="p-10 text-2xl">
+            <div className="uppercase text-right text-5xl px-12 py-8 border-b-solid border-b-2 border-blue-300 gradient rounded-tr-2xl flex justify-between">
+                <h3>our partners</h3>
+                <div className="flex items-center">
+                    <img src={circuit} className="h-12 scale-[2] mix-blend-screen translate-y-6 translate-x-3"/>
+                    <img src={pin} className="w-12 scale-[2.5] mix-blend-screen -translate-y-12"/>
+                </div>
+            </div>
+            <div className="p-10 text-2xl space-y-10 text-center">
                 <p>Description text for this section can go here. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
                 <div className="flex gap-10">
-                    <div className="char_border  flex justify-center">
-                        <div className="bg-blue-400 bg-opacity-35">
-                            <img className=" bg-blue-400 bg-opacity-35 p-2 hover:scale-125 transition-transform object-contain object-center" src={extra}/>
+                    <div className="char_border">
+                        <div className="bg-blue-400 bg-opacity-50 mix-blend-overlay">
+                            <img className="p-4 hover:scale-125 h-32 transition-transform object-contain object-center" src={extra}/>
                         </div>
-                        
                     </div>
-                    <div className="char_border flex justify-center">
-                        <img className=" bg-blue-400 bg-opacity-35 p-2 hover:scale-125 transition-transform object-contain object-center" src={stackup}/>
+                    <div className="char_border">
+                        <div className="bg-blue-400 bg-opacity-50 mix-blend-overlay">
+                            <img className=" p-4 hover:scale-125 h-32 transition-transform object-contain object-center" src={stackup}/>
+                        </div>
                     </div>
-                    <div className="char_border flex justify-center">
-                        <img className=" bg-blue-400 bg-opacity-35 p-2 hover:scale-125 transition-transform object-contain object-center" src={reach}/>
+                    <div className="char_border">
+                        <div className="bg-blue-400 bg-opacity-50 mix-blend-overlay">
+                            <img className="p-4 hover:scale-125 h-32 transition-transform object-contain object-center" src={reach}/>
+                        </div>
                     </div>
                 </div>
+            </div>
+            <div className="flex justify-center gap-10 translate-y-[50%]">
+                <a href="https://www.paypal.com/donate/?hosted_button_id=RUGEY8J38GKU4">
+                    <button className="trispace font-semibold text-2xl px-10">donate</button>
+                </a>
+                <a href="https://boundlessgamers.org/">
+                    <button className="trispace font-semibold text-2xl px-10">boundless gamers</button>
+                </a>
             </div>
         </section>
 

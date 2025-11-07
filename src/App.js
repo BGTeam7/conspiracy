@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 
 import Home from "./pages/home"; 
+import TersmOfUse from './pages/termsofuse';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         {/* <Navbar/> */}
         <Routes>
           <Route exact path="/" element={<Home/>}/>
+          <Route exact path="/termsofuse" element={<TersmOfUse/>}/>
         </Routes>
         <Footer/>
       </Router>

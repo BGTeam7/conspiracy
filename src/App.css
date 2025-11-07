@@ -45,22 +45,23 @@ button {
 progress {
   border: solid #6ECBF5 2px;
   width: 50%;
-  border-radius: 0 10px 10px 0;
+  height: 1.75rem;
+  border-radius: 0 2rem 2rem 0;
   background: none;
 }
 
 progress[value]::-webkit-progress-bar {
-  background: #6ECBF54d;
+  background: #6ecaf58c;
   mix-blend-mode: overlay;
 }
 
 progress[value]::-webkit-progress-value {
-  background-color: #6ecaf543;
+  background-color: #6ecaf58c;
   mix-blend-mode: overlay;
 }
 
 progress[value]::-moz-progress-bar {
-  background: #6ecaf54d;
+  background: #6ecaf58c;
   border-radius: 0 50px 50px 0;
   mix-blend-mode: lighten;
 }
