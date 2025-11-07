@@ -65,3 +65,10 @@ progress[value]::-moz-progress-bar {
   border-radius: 0 50px 50px 0;
   mix-blend-mode: lighten;
 }
+
+.scanlines {
+  background: repeating-linear-gradient(transparent, transparent 2px, black 3px, black 3px);
+  background-size: auto 100%;
+  background-position: center center;
+  opacity: 1;
+}
