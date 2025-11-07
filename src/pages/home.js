@@ -5,6 +5,13 @@ import journal from "../assets/journal.png"
 import file from "../assets/classified_folder.png"
 import mingo from "../assets/mingo.png"
 import logo from "../assets/logo.png"
+import stackup from "../assets/stackup.png"
+import extra from "../assets/extralife.svg"
+import reach from "../assets/reach.png"
+import { FaXbox, FaPlaystation } from "react-icons/fa6";
+import { SiEpicgames } from "react-icons/si";
+import DevTeam from "../data/dev";
+import Card from "../components/card";
 
 const Home = () => {
     return(
@@ -13,16 +20,18 @@ const Home = () => {
             <img className="mix-blend-lighten w-full" src={logo}/>
         </section>
         <section>
-            <div className="flex gap-8 justify-center">
-                {/* We want to make these images bigger once we have all the images put together! */}
-                <button>coming soon on</button>
-                <button>epic</button>
-                <button>xbox</button>
-                <button>ps</button>
+            <div>
+                <div className="flex gap-8 justify-center my-10">
+                    <button className="trispace text-2xl">coming soon on</button>
+                    <button><SiEpicgames size={36}/></button>
+                    <button><FaXbox size={36}/></button>
+                    <button><FaPlaystation size={36}/></button> 
+                </div>
+                <hr className="border-2 border-[#6ECBF5] border-solid w-1/3 absolute translate-x-[100%] -translate-y-20 -z-10"/>
             </div>
         </section>
         <section className="mx-8 md:mx-40 rounded-bl-2xl rounded-tr-2xl border-solid border-2 border-blue-300 bg-[rgba(57,119,252,0.15)]">
-            <h1 className="uppercase text-right text-5xl px-6 py-4 border-b-solid border-b-2 border-blue-300 gradient rounded-tr-2xl">
+            <h1 className="uppercase text-right text-5xl px-12 py-8 border-b-solid border-b-2 border-blue-300 gradient rounded-tr-2xl">
                 explore familiar worlds
             </h1>
             <div className="p-10">
@@ -44,7 +53,7 @@ const Home = () => {
             <img src={connector} className="mix-blend-overlay self-center"/>
         </div>
         <section className="mx-8 md:mx-40 rounded-bl-2xl rounded-tr-2xl border-solid border-2 border-blue-300 bg-[rgba(57,119,252,0.15)]">
-            <h1 className="uppercase text-left text-5xl px-6 py-4 border-b-solid border-b-2 border-blue-300 gradient rounded-tr-2xl">
+            <h1 className="uppercase text-left text-5xl px-12 py-8 border-b-solid border-b-2 border-blue-300 gradient rounded-tr-2xl">
                 discover mingo's story
             </h1>
             <div className="p-10 space-y-10">
@@ -53,20 +62,23 @@ const Home = () => {
                         <img className="h-full w-auto" src={mingo}/>
                     </div>
                     <div className="space-y-4">
-                        <div className="flex bg-[#e372d64e] p-5 rounded-tr-2xl">
-                            <h1 className="uppercase text-lg opacity-100">mingo</h1>
-                            <p>Flamingo-Human Hybrid</p>
+                        <div className="flex gap-4 items-center bg-[#e372d64e] p-5 rounded-tr-2xl">
+                            <h1 className="uppercase opacity-100 trispace font-semibold text-3xl">mingo</h1>
+                            <p className="text-xl">Flamingo-Human Hybrid</p>
                         </div>
                         <div>
-                            <progress id="heart" value="32" max="100"> 32% </progress>
-                            <label for="heart"> stat 1</label>
-                            <br/>
-                            <progress id="heart" value="32" max="100"> 32% </progress>
-                            <label for="heart"> stat2</label>
-                            <br/>
-                            <progress id="heart" value="32" max="100"> 32% </progress>
-                            <label for="heart"> stat 3</label>
-                            <br/>
+                            <div className="flex gap-2 items-center">
+                                <progress id="heart" value="32" max="100"> 32% </progress>
+                                <label className="uppercase font-semibold" for="heart"> stat#1</label>
+                            </div>
+                            <div className="flex gap-2 items-center">
+                                <progress id="heart" value="32" max="100"> 32% </progress>
+                                <label className="uppercase font-semibold" for="heart"> stat#2</label>
+                            </div>
+                            <div className="flex gap-2 items-center">
+                                <progress id="heart" value="32" max="100"> 32% </progress>
+                                <label className="uppercase font-semibold" for="heart"> stat#3</label>
+                            </div>
                         </div>
                         
                         <p className="text-xl font-semibold">
@@ -84,14 +96,16 @@ const Home = () => {
             <img src={connector} className="mix-blend-overlay self-center -scale-x-100"/>
         </div>
         <section className="mx-8 md:mx-40 rounded-bl-2xl rounded-tr-2xl border-solid border-2 border-blue-300 bg-[rgba(57,119,252,0.15)]">
-            <h1 className="uppercase text-right text-5xl px-6 py-4 border-b-solid border-b-2 border-blue-300 gradient rounded-tr-2xl">
+            <h1 className="uppercase text-right text-5xl px-12 py-8 border-b-solid border-b-2 border-blue-300 gradient rounded-tr-2xl">
                 featured dev team
             </h1>
             <div className="p-10">
-                <div className="flex">
-                    <div>one</div>
-                    <div>one</div>
-                    <div>one</div>
+                <div className="flex justify-around gap-4">
+                    {DevTeam.map((e) => {
+                        return (
+                            <Card img={e.img} name={e.name}/>
+                        )
+                    })}
                 </div>
             </div>
         </section>
@@ -99,20 +113,23 @@ const Home = () => {
             <img src={connector} className="mix-blend-overlay self-center"/>
         </div>
         <section className="mx-8 md:mx-40 rounded-bl-2xl rounded-tr-2xl border-solid border-2 border-blue-300 bg-[rgba(57,119,252,0.15)]">
-            <h1 className="uppercase text-left text-5xl px-6 py-4 border-b-solid border-b-2 border-blue-300 gradient rounded-tr-2xl">
+            <h1 className="uppercase text-left text-5xl px-12 py-8 border-b-solid border-b-2 border-blue-300 gradient rounded-tr-2xl">
                 our partners
             </h1>
             <div className="p-10 text-2xl">
                 <p>Description text for this section can go here. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
                 <div className="flex gap-10">
-                    <div className="char_border">
-                        <img className="scale-110 hover:scale-125 transition-transform" src={file}/>
+                    <div className="char_border  flex justify-center">
+                        <div className="bg-blue-400 bg-opacity-35">
+                            <img className=" bg-blue-400 bg-opacity-35 p-2 hover:scale-125 transition-transform object-contain object-center" src={extra}/>
+                        </div>
+                        
                     </div>
-                    <div className="char_border">
-                        <img className="scale-110 hover:scale-125 transition-transform" src={file}/>
+                    <div className="char_border flex justify-center">
+                        <img className=" bg-blue-400 bg-opacity-35 p-2 hover:scale-125 transition-transform object-contain object-center" src={stackup}/>
                     </div>
-                    <div className="char_border">
-                        <img className="scale-110 hover:scale-125 transition-transform" src={file}/>
+                    <div className="char_border flex justify-center">
+                        <img className=" bg-blue-400 bg-opacity-35 p-2 hover:scale-125 transition-transform object-contain object-center" src={reach}/>
                     </div>
                 </div>
             </div>
