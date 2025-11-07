@@ -96,8 +96,8 @@ const Home = () => {
                         </p>
                     </div>
                 </div>
-                <div className="flex">
-                    <p className="w-3/4 text-center text-2xl">To learn more about Mingo's story, click the journal icon over here! </p>
+                <div className="grid grid-cols-3">
+                    <p className="col-span-2 self-center text-center text-2xl">To learn more about Mingo's story, click the journal icon over here! </p>
                     <img src={journal} className="w-full"/>
                 </div>
             </div>
@@ -138,18 +138,18 @@ const Home = () => {
                 <p>Description text for this section can go here. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
                 <div className="flex gap-10">
                     <div className="char_border">
-                        <div className="bg-blue-400 bg-opacity-50 mix-blend-overlay">
-                            <img className="p-4 hover:scale-125 h-32 transition-transform object-contain object-center" src={extra}/>
+                        <div className="bg-blue-400 bg-opacity-25">
+                            <img className="p-4 hover:scale-110 h-32 transition-transform object-contain object-center" src={extra}/>
                         </div>
                     </div>
                     <div className="char_border">
-                        <div className="bg-blue-400 bg-opacity-50 mix-blend-overlay">
-                            <img className=" p-4 hover:scale-125 h-32 transition-transform object-contain object-center" src={stackup}/>
+                        <div className="bg-blue-400 bg-opacity-25">
+                            <img className=" p-4 hover:scale-110 h-32 transition-transform object-contain object-center" src={stackup}/>
                         </div>
                     </div>
                     <div className="char_border">
-                        <div className="bg-blue-400 bg-opacity-50 mix-blend-overlay">
-                            <img className="p-4 hover:scale-125 h-32 transition-transform object-contain object-center" src={reach}/>
+                        <div className="bg-blue-400 bg-opacity-25">
+                            <img className="p-4 hover:scale-110 h-32 transition-transform object-contain object-center" src={reach}/>
                         </div>
                     </div>
                 </div>
