@@ -18,7 +18,7 @@ import circuit from "../assets/pin_circuit.svg"
 const Home = () => {
     return(
         <>
-        <section className="flex justify-center p-24">
+        <section className="flex justify-center py-24">
             <img className="mix-blend-lighten w-full" src={logo}/>
         </section>
         <section>
@@ -39,7 +39,7 @@ const Home = () => {
                         <img src={pin} className="w-12 scale-[2.5] mix-blend-screen -scale-x-[2.5] -translate-y-12"/>
                         <img src={circuit} className="h-12 scale-[2] mix-blend-screen translate-y-6 -translate-x-3  -scale-x-[2]"/>
                     </div>
-                    <h3>explore familiar worlds</h3>
+                    <h3 className="trispace font-medium">explore familiar worlds</h3>
                 </div>
                 <div className="p-10">
                     <div className="flex gap-10">
@@ -64,7 +64,7 @@ const Home = () => {
         <div className="scanlines mx-8 md:mx-40">
             <section className="rounded-bl-2xl rounded-tr-2xl border-solid border-2 border-blue-300 bg-[rgba(57,119,252,0.15)]">
                 <div className="uppercase text-right text-5xl px-12 py-8 border-b-solid border-b-2 border-blue-300 gradient rounded-tr-2xl flex justify-between">
-                    <h3>discover mingo's story</h3>
+                    <h3 className="trispace font-medium">discover mingo's story</h3>
                     <div className="flex items-center">
                         <img src={circuit} className="h-12 scale-[2] mix-blend-screen translate-y-6 translate-x-3"/>
                         <img src={pin} className="w-12 scale-[2.5] mix-blend-screen -translate-y-12"/>
@@ -118,7 +118,7 @@ const Home = () => {
                         <img src={pin} className="w-12 scale-[2.5] mix-blend-screen -scale-x-[2.5] -translate-y-12"/>
                         <img src={circuit} className="h-12 scale-[2] mix-blend-screen translate-y-6 -translate-x-3  -scale-x-[2]"/>
                     </div>
-                    <h3>featured dev team</h3>
+                    <h3 className="trispace font-medium">featured dev team</h3>
                 </div>
                 <div className="p-10">
                     <div className="flex justify-around gap-4">
@@ -137,7 +137,7 @@ const Home = () => {
         <div className="scanlines mx-8 md:mx-40">
             <section className="rounded-bl-2xl rounded-tr-2xl border-solid border-2 border-blue-300 bg-[rgba(57,119,252,0.15)]">
                 <div className="uppercase text-right text-5xl px-12 py-8 border-b-solid border-b-2 border-blue-300 gradient rounded-tr-2xl flex justify-between">
-                    <h3>our partners</h3>
+                    <h3 className="trispace font-medium">our partners</h3>
                     <div className="flex items-center">
                         <img src={circuit} className="h-12 scale-[2] mix-blend-screen translate-y-6 translate-x-3"/>
                         <img src={pin} className="w-12 scale-[2.5] mix-blend-screen -translate-y-12"/>
