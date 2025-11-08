@@ -85,11 +85,17 @@ progress[value]::-moz-progress-bar {
     z-index: 2147483649;
     background: rgba(0, 0, 0, 0.3);
     opacity: 0.75;
-    animation: scanline 6s linear infinite;
+    /* animation: scanline 6s linear infinite; */
 }
 
 @keyframes scanline {
     0% {
         transform: translate3d(0, 200000%, 0);
     }
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
 }

@@ -71,10 +71,8 @@ const Home = () => {
                     </div>
                 </div>
                 <div className="p-10 space-y-10">
-                    <div className="flex gap-4 p-4 border-solid border-2 text-left rounded-tr-3xl border-purple-300">
-                        <div className="w-full">
-                            <img className="h-full w-auto" src={mingo}/>
-                        </div>
+                    <div className="md:flex gap-4 p-4 border-solid border-2 text-left rounded-tr-3xl border-purple-300">
+                        <img className="object-cover w-full" src={mingo}/>
                         <div className="space-y-4">
                             <div className="flex gap-4 items-center bg-[#e372d64e] p-5 rounded-tr-2xl">
                                 <h1 className="uppercase opacity-100 trispace font-semibold text-3xl">mingo</h1>

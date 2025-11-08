@@ -10,6 +10,7 @@ import {
 
 import Home from "./pages/home"; 
 import TersmOfUse from './pages/termsofuse';
+import Privacy from './pages/privacy';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home/>}/>
           <Route exact path="/termsofuse" element={<TersmOfUse/>}/>
+          <Route exact path="/privacy" element={<Privacy/>}/>
         </Routes>
         <Footer/>
       </Router>
