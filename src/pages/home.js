@@ -18,31 +18,30 @@ import circuit from "../assets/pin_circuit.svg"
 const Home = () => {
     return(
         <>
-        <section className="flex justify-center py-24">
+        <section className="flex justify-center pt-16 md:py-24">
             <img className="mix-blend-lighten w-full" src={logo}/>
         </section>
         <section>
             <div>
                 <div className="flex flex-col sm:flex-row gap-8 justify-center my-10">
-                    <button className="trispace self-center font-semibold text-2xl px-10 w-max">coming soon on</button>
+                    <button className="trispace self-center font-semibold text-base md:text-2xl px-10 w-max">coming soon on</button>
                     <div className="flex justify-center gap-8">
                         <button><SiEpicgames size={36}/></button>
                         <button><FaXbox size={36}/></button>
                         <button><FaPlaystation size={36}/></button> 
                     </div>
-                    
                 </div>
                 <hr className="border-2 border-[#6ECBF5] border-solid w-[200px] sm:w-[500px] absolute right-1/2 translate-x-1/2 -translate-y-20 -z-10"/>
             </div>
         </section>
         <div className="scanlines mx-8 lg:mx-40"> 
             <section className=" rounded-bl-2xl rounded-tr-2xl border-solid border-2 border-blue-300 bg-[rgba(57,119,252,0.15)]">
-                <div className="uppercase text-right text-2xl md:text-5xl px-12 py-8 border-b-solid border-b-2 border-blue-300 gradient rounded-tr-2xl flex justify-between">
+                <div className="uppercase text-right text-xl sm:text-2xl md:text-5xl px-12 md:py-8 border-b-solid border-b-2 border-blue-300 gradient rounded-tr-2xl md:flex justify-between">
                     <div className="flex items-center">
-                        <img src={pin} className="w-12 scale-[2.5] mix-blend-screen -scale-x-[2.5] -translate-y-12"/>
+                        <img src={pin} className="w-12 md:scale-[2.5] mix-blend-screen -scale-x-100 md:-scale-x-[2.5] -translate-y-5 md:-translate-y-12"/>
                         <img src={circuit} className="h-12 scale-[2] mix-blend-screen translate-y-6 -translate-x-3  -scale-x-[2]"/>
                     </div>
-                    <h3 className="trispace font-medium ">explore familiar worlds</h3>
+                    <h3 className="trispace font-medium">explore familiar worlds</h3>
                 </div>
                 <div className="p-10">
                     <div className="flex flex-col sm:flex-row gap-10">
@@ -56,7 +55,7 @@ const Home = () => {
                             <img className="scale-110 hover:scale-125 transition-transform" src={file}/>
                         </div>
                     </div>
-                    <p className="text-lg md:text-2xl text-center mt-8">Help Mingo find her family and friends, who are trapped in the pixels of some of your favorite video game levels! Explore new frontiers in your favorite universes, and break the fourth wall as you learn more about the mystery taht ties them together - will Mingo rescue all of her loved ones? Does she figure out what's happening in the end? Can she beat the Rainbow Road level? Only one way to find out!</p>
+                    <p className="text-sm md:text-2xl text-center mt-8">Help Mingo find her family and friends, who are trapped in the pixels of some of your favorite video game levels! Explore new frontiers in your favorite universes, and break the fourth wall as you learn more about the mystery taht ties them together - will Mingo rescue all of her loved ones? Does she figure out what's happening in the end? Can she beat the Rainbow Road level? Only one way to find out!</p>
                 </div>
             </section>
         </div>
@@ -114,12 +113,12 @@ const Home = () => {
         </div>
         <div className="scanlines mx-8 lg:mx-40">
             <section className="rounded-bl-2xl rounded-tr-2xl border-solid border-2 border-blue-300 bg-[rgba(57,119,252,0.15)]">
-                <div className="uppercase text-right text-2xl md:text-5xl px-12 py-8 border-b-solid border-b-2 border-blue-300 gradient rounded-tr-2xl flex justify-between">
+                <div className="uppercase text-right text-xl sm:text-2xl md:text-5xl px-12 md:py-8 border-b-solid border-b-2 border-blue-300 gradient rounded-tr-2xl md:flex justify-between">
                     <div className="flex items-center">
-                        <img src={pin} className="w-12 scale-[2.5] mix-blend-screen -scale-x-[2.5] -translate-y-12"/>
+                        <img src={pin} className="w-12 md:scale-[2.5] mix-blend-screen -scale-x-100 md:-scale-x-[2.5] -translate-y-5 md:-translate-y-12"/>
                         <img src={circuit} className="h-12 scale-[2] mix-blend-screen translate-y-6 -translate-x-3  -scale-x-[2]"/>
                     </div>
-                    <h3 className="trispace font-medium text-right">featured dev team</h3>
+                    <h3 className="trispace font-medium">featured dev team</h3>
                 </div>
                 <div className="p-10">
                     <div className="md:flex justify-around gap-4">
@@ -146,20 +145,20 @@ const Home = () => {
                 </div>
                 <div className="p-10 text-2xl space-y-10 text-center">
                     <p>Description text for this section can go here. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                    <div className="md:flex gap-10">
+                    <div className="md:flex justify-center gap-10">
                         <div className="char_border">
-                            <div className="bg-blue-400 bg-opacity-25 justify-center flex">
-                                <img className="p-4 hover:scale-110 h-32 transition-transform object-contain object-center" src={extra}/>
+                            <div className="bg-[#1242b1] bg-opacity-50 justify-center flex">
+                                <img className="p-4 hover:scale-110 h-32 2xl:h-52 transition-transform object-contain object-center" src={extra}/>
                             </div>
                         </div>
                         <div className="char_border">
-                            <div className="bg-blue-400 bg-opacity-25 justify-center flex">
-                                <img className=" p-4 hover:scale-110 h-32 transition-transform object-contain object-center" src={stackup}/>
+                            <div className="bg-[#1242b1] bg-opacity-50 justify-center flex">
+                                <img className=" p-4 hover:scale-110 h-32 2xl:h-52 transition-transform object-contain object-center" src={stackup}/>
                             </div>
                         </div>
                         <div className="char_border">
-                            <div className="bg-blue-400 bg-opacity-25 justify-center flex">
-                                <img className="p-4 hover:scale-110 h-32 transition-transform object-contain object-center" src={reach}/>
+                            <div className="bg-[#1242b1] bg-opacity-50 justify-center flex">
+                                <img className="p-4 hover:scale-110 h-32 2xl:h-52 transition-transform object-contain object-center" src={reach}/>
                             </div>
                         </div>
                     </div>
