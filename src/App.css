@@ -99,3 +99,44 @@ td, th {
   text-align: left;
   padding: 8px;
 }
+
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  /* display: none; Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+.expanded-card {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 100;
+  width: 80%;
+  animation: cardOpen 0.5s ease-in;
+}
+
+@keyframes cardOpen {
+  0% {
+    width: 2px;
+    height: 2px;
+  } 
+  50% {
+    width: 67%;
+    height: 2px;
+    transform-origin: 50%;
+  } 
+  100% {
+    width: 67%;
+    height: 200px;
+    transform-origin: 50%;
+  }
+}
