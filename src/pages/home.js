@@ -76,7 +76,7 @@ const Home = () => {
                     <div className="md:flex gap-4 p-4 border-solid border-2 text-left rounded-tr-3xl border-purple-300">
                         <img className="object-cover w-full" src={mingo}/>
                         <div className="space-y-4">
-                            <div className="flex gap-4 items-center bg-[#e372d64e] p-5 rounded-tr-2xl">
+                            <div className="md:flex gap-4 items-center bg-[#e372d64e] p-5 rounded-tr-2xl">
                                 <h1 className="uppercase opacity-100 trispace font-semibold text-3xl">mingo</h1>
                                 <p className="text-base md:text-xl">Flamingo-Human Hybrid</p>
                             </div>
@@ -100,10 +100,10 @@ const Home = () => {
                             </p>
                         </div>
                     </div>
-                    <div className="grid grid-cols-3">
+                    {/* <div className="grid grid-cols-3">
                         <p className="col-span-2 self-center text-center text-lg md:text-2xl">To learn more about Mingo's story, click the journal icon over here! </p>
                         <img src={journal} className="w-full"/>
-                    </div>
+                    </div> */}
                 </div>
             </section>
 
