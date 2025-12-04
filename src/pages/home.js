@@ -120,7 +120,7 @@ const Home = () => {
                             </div>
                             
                             <p className="text-base md:text-xl font-semibold">
-                                More text here. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  tempor incididunt ut labore et dolore magna aliqua.
+                                She was just finally getting the hang of standing on one leg. Now she’s crashing through cyberspace on a world-hopping mission to rescue her family.
                             </p>
                         </div>
                     </div>

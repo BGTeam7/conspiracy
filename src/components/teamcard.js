@@ -1,11 +1,15 @@
 import {useState, useRef} from "react";
 import logo from "../logo.svg"
-import { FaX, FaGithub, FaSuitcase, FaLinkedin } from "react-icons/fa6";
+import Paint from "../assets/paint.svg";
+import Pen from "../assets/pen.svg";
+import ui_ux from "../assets/ui_ux.svg";
+import { FaX, FaGithub, FaSuitcase, FaLinkedin, FaBook } from "react-icons/fa6";
 
 
 function TeamCard(props) {
 
     //Using useToggle Hook
+    
 
     const useToggle = (initialState) => {
     const [toggleValue, setToggleValue] = useState(initialState);
@@ -19,19 +23,25 @@ function TeamCard(props) {
 
     function Github() {
         if (props.github !== "") {
-            return <a href={props.github}><FaGithub/></a>
+            return <a href={props.github}>
+                <FaGithub size={36} className="hover:text-blue-300"/>
+                </a>
         }
     }
 
     function Portfolio() {
         if (props.portfolio !== "") {
-            return <a href={props.portfolio}><FaSuitcase/></a>
+            return <a href={props.portfolio}>
+                <FaBook size={36} className="hover:text-blue-300"/>
+                </a>
         }
     }
 
     function Linkedin() {
         if (props.linkedin !== "") {
-            return <a href={props.linkedin}><FaLinkedin/></a>
+            return <a href={props.linkedin}>
+                <FaLinkedin size={36} className="hover:text-blue-300"/>
+                </a>
         }
     }
 
@@ -55,9 +65,18 @@ function TeamCard(props) {
                             <img referrerPolicy="no-referrer" loading="lazy" src={img_link} className="aspect-square sm:aspect-[3/4] rounded-tr-2xl rounded-bl-2xl w-full md:w-1/3 h-auto object-cover border-solid border-blue-300 border-2"/>
                             <div>
                                 <div className="space-y-4">
-                                    <Github/>
-                                    <Linkedin/>
-                                    <Portfolio/>
+                                    <div className="flex">
+                                        <img src={Paint}/> 
+                                        <span> Art</span> 
+                                    </div>
+                                    <div className="flex">
+                                        <img src={Pen} /> 
+                                        <span>UI/UX</span> 
+                                    </div>
+                                    <div className="flex">
+                                        <img src={ui_ux} /> 
+                                        <span>Web Design</span>
+                                    </div>
                                 </div>
                                 <div className="grid">
                                     <p className="rounded-tr-lg bg-blue-500 uppercase col-span-2 px-10 text-center">inventory</p>
@@ -74,7 +93,12 @@ function TeamCard(props) {
                                     <p className="uppercase text-lg">fun fact:</p>
                                     <p>{props.fact}</p>
                                 </div>
-                                
+                            {/* TEMP */}
+                                <div className="space-y-4">
+                                    <Github/>
+                                    <Linkedin/>
+                                    <Portfolio/>
+                                </div>
                             </div>
                         </div>
                         {/* <img src={props.img} className="aspect-square w-full md:w-1/3 h-auto object-cover pinkframe border-pink-300 border-2"/> */}
