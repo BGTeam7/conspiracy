@@ -9,8 +9,15 @@
   border-image: url(./assets/levels_border.svg) 30;
 }
 .char_border {
-  border: solid 30px;
-  border-image: url(./assets/char_border.svg) 30;
+  border: solid 20px;
+  border-image: url(./assets/char_border.svg) 35;
+}
+
+.partner_border {
+  border: solid 15px;
+  padding: 8px;
+  border-image: url(./assets/partner.svg) 35;
+  /* border-radius: 0 20px 0 20px; */
 }
 
 .border {
@@ -27,6 +34,7 @@
 
 .gradient {
   background: linear-gradient(180deg, rgba(57, 120, 252, 0.63) 0%, rgba(48, 68, 150, 0.857881) 30.77%, #2A2356 84.62%);
+  /* mix-blend-mode: hard-light; */
 }
 
 button {
@@ -38,7 +46,7 @@ button {
   text-transform: uppercase;
   padding: 1rem;
   font-weight: 600;
-  border: 2px solid rgba(207, 152, 253, 0.562) 
+  border: 1px solid rgba(207, 152, 253, 0.562) 
 
 }
 

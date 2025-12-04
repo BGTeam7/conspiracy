@@ -5,7 +5,7 @@ import logo_mini from "../assets/logo_mini.svg"
 
 const Footer = () => {
     return(
-        <footer className=" bg-[#111] text-gray-400 py-12 px-24 mt-14">
+        <footer className=" bg-[#111] text-gray-400 py-12 px-24">
             <div className="flex flex-col items-baseline md:items-center md:flex-row md:justify-between lg:justify-normal gap-4 lg:gap-24">
                 <div className="space-y-4 w-min">
                     <img src={logo_mini}/>

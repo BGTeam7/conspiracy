@@ -37,15 +37,15 @@ function TeamCard(props) {
 
     return (
         <div>
-            <div className="char_border w-52 sm:w-64" onClick={setToggle}>
-                <img referrerPolicy="no-referrer" className="w-full aspect-[5/4] object-cover" loading="lazy" src={img_link}/>
-                <p className="uppercase trispace text-sm lg:text-lg text-center p-2 rounded-bl-2xl bg-blue-400 bg-opacity-25 mt-1">{props.name}</p>
+            <div className="char_border w-56 sm:w-64 h-56 sm:h-64 flex flex-col" onClick={setToggle}>
+                <img referrerPolicy="no-referrer" className="w-full h-full object-cover rounded-tr-xl" loading="lazy" src={img_link}/>
+                <p className="uppercase trispace text-sm lg:text-lg text-center p-2 rounded-bl-xl bg-blue-400 bg-opacity-25 mt-2">{props.name}</p>
             </div>
             {toggle &&(
                 <div>
                     <div id="overlay" onClick={setToggle}></div>
                     <div className="expanded-card backdrop-blur-xl border-solid border-2 border-blue-400 rounded-tr-2xl">
-                        <div className="flex justify-between items-center p-4 border-b-solid border-b-2 border-blue-400 gradient rounded-tr-2xl">
+                        <div className="flex justify-between items-center p-4 border-b-solid border-b-2 border-blue-400 gradient rounded-tr-xl">
                             <p className="uppercase">{props.name} 
                                 <span className="lowercase text-sm"> ({props.pronouns})</span>
                             </p>
