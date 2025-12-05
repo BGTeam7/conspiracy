@@ -24,7 +24,7 @@ const Home = () => {
     var random_int = Math.floor(Math.random()*DevTeam.length)
     var random_id = [random_int,(random_int+1)%DevTeam.length, (random_int +2)%DevTeam.length];
     var random_team = [DevTeam[random_id[0]], DevTeam[random_id[1]], DevTeam[random_id[2]]]
-    console.log(random_id)
+    // console.log(random_id)
     return(
         <div className="bg-gradient-to-b from-transparent from-40% to-[#111111c6]">
         <section className="flex justify-center pt-16 md:py-24">
@@ -58,7 +58,7 @@ const Home = () => {
                         <img src={pin} className="w-10 scale-[2] mix-blend-screen -scale-x-100 -scale-x-[2] -translate-y-5 translate-x-10 md:translate-x-0 md:-translate-y-12"/>
                         <img src={circuit} className="h-12 mix-blend-screen translate-y-6 -translate-x-3 -scale-x-100"/>
                     </div>
-                    <h3 className="trispace font-medium">explore familiar worlds</h3>
+                    <h3 className="trispace font-medium text-center">explore familiar worlds</h3>
                 </div>
                 <div className="p-10">
                     <div className="flex flex-col sm:flex-row gap-10">
@@ -72,7 +72,7 @@ const Home = () => {
                             <img className="scale-110 hover:scale-125 transition-transform" src={file}/>
                         </div>
                     </div>
-                    <p className="text-sm md:text-2xl text-center mt-8">Help Mingo find her family and friends, who are trapped in the pixels of some of your favorite video game levels! Explore new frontiers in your favorite universes, and break the fourth wall as you learn more about the mystery taht ties them together - will Mingo rescue all of her loved ones? Does she figure out what's happening in the end? Can she beat the Rainbow Road level? Only one way to find out!</p>
+                    {/* <p className="text-sm md:text-2xl text-center mt-8">Help Mingo find her family and friends, who are trapped in the pixels of some of your favorite video game levels! Explore new frontiers in your favorite universes, and break the fourth wall as you learn more about the mystery that ties them together - will Mingo rescue all of her loved ones? Does she figure out what's happening in the end? Can she beat the Rainbow Road level? Only one way to find out!</p> */}
                 </div>
             </section>
         </div>
@@ -106,16 +106,16 @@ const Home = () => {
                             </div>
                             <div className="space-y-4">
                                 <div className="flex gap-2 items-center">
-                                    <progress id="heart" value="32" max="100"> 32% </progress>
-                                    <label className="uppercase font-semibold" for="heart"> stat#1</label>
+                                    <progress id="heart" value="100" max="100"> 10% </progress>
+                                    <label className="uppercase font-semibold" for="heart"> PINK</label>
                                 </div>
                                 <div className="flex gap-2 items-center">
-                                    <progress id="heart" value="32" max="100"> 32% </progress>
-                                    <label className="uppercase font-semibold" for="heart"> stat#2</label>
+                                    <progress id="heart" value="80" max="100"> 80% </progress>
+                                    <label className="uppercase font-semibold" for="heart">DMG</label>
                                 </div>
                                 <div className="flex gap-2 items-center">
-                                    <progress id="heart" value="32" max="100"> 32% </progress>
-                                    <label className="uppercase font-semibold" for="heart"> stat#3</label>
+                                    <progress id="heart" value="85" max="100"> 85% </progress>
+                                    <label className="uppercase font-semibold" for="heart"> WITS</label>
                                 </div>
                             </div>
                             
@@ -155,7 +155,7 @@ const Home = () => {
                     <div className="flex flex-col sm:flex-row flex-wrap items-center justify-around gap-4">
                         {random_team.map((e) => {
                             return (
-                                <TeamCard img={e.photo} name={e.name} pronouns={e.pronouns} game={e.game} fact={e.fact} github={e.github} portfolio={e.portfolio} linkedin={e.linkedin}/>
+                                <TeamCard role={e.team} img={e.photo} name={e.name} pronouns={e.pronouns} game={e.game} inventory={e.items} fact={e.fact} github={e.github} portfolio={e.portfolio} linkedin={e.linkedin}/>
                             )
                         })}
                     </div>
@@ -182,7 +182,7 @@ const Home = () => {
                     <h3 className="trispace font-medium">our partners</h3>
                 </div>
                 <div className="p-10 text-2xl space-y-10 text-center">
-                    <p>Description text for this section can go here. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                    <p>Boundless Gamers is a gaming charity committed to helping kids and others in the gaming community and related organizations. Thank you to our partners for joining us on our mission!</p>
                     <div className="flex flex-col md:flex-row items-center justify-center gap-10">
                         <div className="partner_border w-max">
                             <div className="bg-[#1242b1] bg-opacity-50 justify-center md:flex rounded-tr-2xl rounded-bl-2xl">

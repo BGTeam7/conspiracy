@@ -19,7 +19,7 @@ const Footer = () => {
                 </div>
                 <div className="flex flex-col justify-start text-left">
                     <a href="mailto:admin@boundlessgamers.org">Contact Us</a>
-                    <a href="https://pixelgamesstudio.org/">Privacy Policy</a>
+                    <a href="/privacy">Privacy Policy</a>
                     <a href="/termsofuse">Terms of Use</a>
                 </div>
                 <div className="flex flex-col justify-start text-left">

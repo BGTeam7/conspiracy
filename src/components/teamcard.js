@@ -37,6 +37,62 @@ function TeamCard(props) {
         }
     }
 
+    function Skills() {
+
+        return(
+            <div className="text-base">
+                {props.role.includes("Production") && (
+                    <div className="flex gap-4">
+                        <img src={Paint} className="w-4"/> 
+                        <span>Production</span> 
+                    </div>
+                )}
+                {props.role.includes("Development") && (
+                    <div className="flex gap-4">
+                        <img src={Paint} className="w-4"/> 
+                        <span>Development</span> 
+                    </div>
+                )}
+                {props.role.includes("Art") && (
+                    <div className="flex gap-4">
+                        <img src={Paint} className="w-4"/> 
+                        <span>Development</span> 
+                    </div>
+                )}
+                {props.role.includes("Web Design") && (
+                    <div className="flex gap-4">
+                        <img src={Paint} className="w-4"/> 
+                        <span>Development</span> 
+                    </div>
+                )}
+                {props.role.includes("Audio") && (
+                    <div className="flex gap-4">
+                        <img src={Paint} className="w-4"/> 
+                        <span>Development</span> 
+                    </div>
+                )}
+                {props.role.includes("Writing") && (
+                    <div className="flex gap-4">
+                        <img src={Paint} className="w-4"/> 
+                        <span>Development</span> 
+                    </div>
+                )}
+                {props.role.includes("IT") && (
+                    <div className="flex gap-4">
+                        <img src={Paint} className="w-4"/> 
+                        <span>Development</span> 
+                    </div>
+                )}
+                {props.role.includes("Production Support") && (
+                    <div className="flex gap-4">
+                        <img src={Paint} className="w-4"/> 
+                        <span>Production Support</span> 
+                    </div>
+                )}
+            </div>
+        );
+    }
+
     function Linkedin() {
         if (props.linkedin !== "") {
             return <a href={props.linkedin}>
@@ -54,35 +110,31 @@ function TeamCard(props) {
             {toggle &&(
                 <div>
                     <div id="overlay" onClick={setToggle}></div>
-                    <div className="expanded-card backdrop-blur-xl border-solid border-2 border-blue-400 rounded-tr-2xl">
+                    <div className="scanlines expanded-card w-96 backdrop-blur-lg border-solid bg-blue-950 bg-opacity-30 border-2 border-blue-400 rounded-tr-2xl overflow-hidden">
                         <div className="flex justify-between items-center p-4 border-b-solid border-b-2 border-blue-400 gradient rounded-tr-xl">
                             <p className="uppercase">{props.name} 
                                 <span className="lowercase text-sm"> ({props.pronouns})</span>
                             </p>
                             <FaX onClick={setToggle} className="hover:cursor-pointer"/>
                         </div>
-                        <div className="flex flex-col sm:flex-row gap-10 p-8">
-                            <img referrerPolicy="no-referrer" loading="lazy" src={img_link} className="aspect-square sm:aspect-[3/4] rounded-tr-2xl rounded-bl-2xl w-full md:w-1/3 h-auto object-cover border-solid border-blue-300 border-2"/>
+                        <div className="flex flex-col text-base gap-4 p-8">
+                            <img referrerPolicy="no-referrer" loading="lazy" src={img_link} className="aspect-square rounded-tr-2xl rounded-bl-2xl w-full h-auto object-cover border-solid border-blue-300 border-2"/>
                             <div>
-                                <div className="space-y-4">
-                                    <div className="flex">
-                                        <img src={Paint}/> 
+                                <Skills/>
+                                {/* <div className="text-base">
+                                    <div className="flex gap-4">
+                                        <img src={Paint} className="w-4"/> 
                                         <span> Art</span> 
                                     </div>
-                                    <div className="flex">
-                                        <img src={Pen} /> 
+                                    <div className="flex gap-4">
+                                        <img src={Pen} className="w-4"/> 
                                         <span>UI/UX</span> 
                                     </div>
-                                    <div className="flex">
-                                        <img src={ui_ux} /> 
+                                    <div className="flex gap-4">
+                                        <img src={ui_ux} className="w-4"/> 
                                         <span>Web Design</span>
                                     </div>
-                                </div>
-                                <div className="grid">
-                                    <p className="rounded-tr-lg bg-blue-500 uppercase col-span-2 px-10 text-center">inventory</p>
-                                    <p>test</p>
-                                    <p>test</p>
-                                </div>
+                                </div> */}
                             </div>
                             <div className="space-y-4">
                                 <div>
@@ -93,12 +145,16 @@ function TeamCard(props) {
                                     <p className="uppercase text-lg">fun fact:</p>
                                     <p>{props.fact}</p>
                                 </div>
-                            {/* TEMP */}
-                                <div className="space-y-4">
+                                <div>
+                                    <p className="uppercase text-lg">inventory:</p>
+                                    <p>{props.inventory}</p>
+                                </div>
+
+                                {/* <div className="space-y-4">
                                     <Github/>
                                     <Linkedin/>
                                     <Portfolio/>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                         {/* <img src={props.img} className="aspect-square w-full md:w-1/3 h-auto object-cover pinkframe border-pink-300 border-2"/> */}
