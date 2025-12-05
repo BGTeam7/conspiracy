@@ -21,24 +21,30 @@ function TeamCard(props) {
     console.log(props.img + "&sz=w1000")
     var img_link = props.img + "&sz=w1000"
 
-    function Github() {
-        if (props.github !== "") {
-            return <a href={props.github}>
-                <FaGithub size={36} className="hover:text-blue-300"/>
-                </a>
-        }
-    }
-
-    function Portfolio() {
-        if (props.portfolio !== "") {
-            return <a href={props.portfolio}>
-                <FaBook size={36} className="hover:text-blue-300"/>
-                </a>
-        }
+    function Links() {
+        return(
+            <div className="flex gap-4 justify-center">
+                {props.portfolio !== "" && (
+                    <a href={props.portfolio}>
+                        <FaBook size={24} className="hover:text-blue-300"/>
+                    </a>
+                )}
+                {props.github !== "" && (
+                    <a href={props.linkedin}>
+                    <FaGithub size={24} className="hover:text-blue-300"/>
+                    </a>
+                )}
+                {props.linkedin !== "" && (
+                    <a href={props.linkedin}>
+                        <FaLinkedin size={24} className="hover:text-blue-300"/>
+                    </a>
+                )}
+            </div>
+        );
     }
 
     function Skills() {
-
+        //each curly bracket corresponds to a specific team and that team icon only renders when the if statement is fulfilled
         return(
             <div className="text-base">
                 {props.role.includes("Production") && (
@@ -93,14 +99,6 @@ function TeamCard(props) {
         );
     }
 
-    function Linkedin() {
-        if (props.linkedin !== "") {
-            return <a href={props.linkedin}>
-                <FaLinkedin size={36} className="hover:text-blue-300"/>
-                </a>
-        }
-    }
-
     return (
         <div>
             <div className="char_border w-56 sm:w-64 h-56 sm:h-64 flex flex-col" onClick={setToggle}>
@@ -110,6 +108,7 @@ function TeamCard(props) {
             {toggle &&(
                 <div>
                     <div id="overlay" onClick={setToggle}></div>
+                    {/* for the animation in the card expansion, look at expanded card and its connected keyframe animation in App.css. I also added an overflow-hidden class to the whole thing to hide the extra content during the animation */}
                     <div className="scanlines expanded-card w-96 backdrop-blur-lg border-solid bg-blue-950 bg-opacity-30 border-2 border-blue-400 rounded-tr-2xl overflow-hidden">
                         <div className="flex justify-between items-center p-4 border-b-solid border-b-2 border-blue-400 gradient rounded-tr-xl">
                             <p className="uppercase">{props.name} 
@@ -121,20 +120,6 @@ function TeamCard(props) {
                             <img referrerPolicy="no-referrer" loading="lazy" src={img_link} className="aspect-square rounded-tr-2xl rounded-bl-2xl w-full h-auto object-cover border-solid border-blue-300 border-2"/>
                             <div>
                                 <Skills/>
-                                {/* <div className="text-base">
-                                    <div className="flex gap-4">
-                                        <img src={Paint} className="w-4"/> 
-                                        <span> Art</span> 
-                                    </div>
-                                    <div className="flex gap-4">
-                                        <img src={Pen} className="w-4"/> 
-                                        <span>UI/UX</span> 
-                                    </div>
-                                    <div className="flex gap-4">
-                                        <img src={ui_ux} className="w-4"/> 
-                                        <span>Web Design</span>
-                                    </div>
-                                </div> */}
                             </div>
                             <div className="space-y-4">
                                 <div>
@@ -149,13 +134,8 @@ function TeamCard(props) {
                                     <p className="uppercase text-lg">inventory:</p>
                                     <p>{props.inventory}</p>
                                 </div>
-
-                                {/* <div className="space-y-4">
-                                    <Github/>
-                                    <Linkedin/>
-                                    <Portfolio/>
-                                </div> */}
                             </div>
+                            <Links/>
                         </div>
                         {/* <img src={props.img} className="aspect-square w-full md:w-1/3 h-auto object-cover pinkframe border-pink-300 border-2"/> */}
                         

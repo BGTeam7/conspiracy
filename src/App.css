@@ -140,7 +140,13 @@ td, th {
     transform-origin: 50%;
     transform: translate(-50%,-50%);
   } 
-  50% {
+  40% {
+    width: 2px;
+    height: 80vh;
+    transform-origin: 50%;
+    transform: translate(-50%,-50%);
+  } 
+  60% {
     width: 2px;
     height: 80vh;
     transform-origin: 50%;
