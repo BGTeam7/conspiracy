@@ -153,7 +153,7 @@ const Team = [
     nickname: "Pixel",
     pronouns: "The dumb one",
     photo: "https://drive.google.com/thumbnail?id=1lMEK6J_sGYKlmIbfEamGauFL-4SfRLAA",
-    team: "Production, Writing, Human Resources, IT, Fundraising/Social Media, Actors, Production Support, Development",
+    team: "Development",
     role: "1-10 Directing Manager",
     game: "Call of Duty, Battlefield, Assassin’s Creed",
     fact: "I’m not fun",

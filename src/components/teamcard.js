@@ -1,8 +1,17 @@
 import {useState, useRef} from "react";
 import logo from "../logo.svg"
-import Paint from "../assets/paint.svg";
-import Pen from "../assets/pen.svg";
-import ui_ux from "../assets/ui_ux.svg";
+import act from "../assets/teams/act.svg";
+import art from "../assets/teams/art.svg";
+import dev from "../assets/teams/dev.svg";
+import fund from "../assets/teams/fund.svg";
+import game from "../assets/teams/game.svg";
+import hr from "../assets/teams/hr.svg";
+import it from "../assets/teams/it.svg";
+import narra from "../assets/teams/narra.svg";
+import prod from "../assets/teams/prod.svg";
+import uiux from "../assets/teams/uiux.svg";
+import web from "../assets/teams/web.svg";
+
 import { FaX, FaGithub, FaSuitcase, FaLinkedin, FaBook } from "react-icons/fa6";
 
 
@@ -31,7 +40,7 @@ function TeamCard(props) {
                 )}
                 {props.github !== "" && (
                     <a href={props.linkedin}>
-                    <FaGithub size={24} className="hover:text-blue-300"/>
+                        <FaGithub size={24} className="hover:text-blue-300"/>
                     </a>
                 )}
                 {props.linkedin !== "" && (
@@ -49,49 +58,67 @@ function TeamCard(props) {
             <div className="text-base">
                 {props.role.includes("Production") && (
                     <div className="flex gap-4">
-                        <img src={Paint} className="w-4"/> 
+                        <img src={prod} className="w-4"/> 
                         <span>Production</span> 
-                    </div>
-                )}
-                {props.role.includes("Development") && (
-                    <div className="flex gap-4">
-                        <img src={Paint} className="w-4"/> 
-                        <span>Development</span> 
                     </div>
                 )}
                 {props.role.includes("Art") && (
                     <div className="flex gap-4">
-                        <img src={Paint} className="w-4"/> 
-                        <span>Development</span> 
-                    </div>
-                )}
-                {props.role.includes("Web Design") && (
-                    <div className="flex gap-4">
-                        <img src={Paint} className="w-4"/> 
-                        <span>Development</span> 
+                        <img src={art} className="w-4"/> 
+                        <span>Concept Art</span> 
                     </div>
                 )}
                 {props.role.includes("Audio") && (
                     <div className="flex gap-4">
-                        <img src={Paint} className="w-4"/> 
-                        <span>Development</span> 
+                        <img src={web} className="w-4"/> 
+                        <span>Audio</span> 
                     </div>
                 )}
                 {props.role.includes("Writing") && (
                     <div className="flex gap-4">
-                        <img src={Paint} className="w-4"/> 
-                        <span>Development</span> 
+                        <img src={narra} className="w-4"/> 
+                        <span>Narrative</span> 
+                    </div>
+                )}
+                {props.role.includes("Web Design") && (
+                    <div className="flex gap-4">
+                        <img src={web} className="w-4"/> 
+                        <span>Web Design</span> 
+                    </div>
+                )}
+                {props.role.includes("Human Resources") && (
+                    <div className="flex gap-4">
+                        <img src={hr} className="w-4"/> 
+                        <span>Human Resources</span> 
                     </div>
                 )}
                 {props.role.includes("IT") && (
                     <div className="flex gap-4">
-                        <img src={Paint} className="w-4"/> 
+                        <img src={it} className="w-4"/> 
+                        <span>IT</span> 
+                    </div>
+                )}
+                {props.role.includes("Fundraising") && (
+                    <div className="flex gap-4">
+                        <img src={fund} className="w-4"/> 
+                        <span>Fundraising/Social Media</span> 
+                    </div>
+                )}
+                {props.role.includes("Development") && (
+                    <div className="flex gap-4">
+                        <img src={dev} className="w-4"/> 
                         <span>Development</span> 
+                    </div>
+                )}
+                {props.role.includes("Actors") && (
+                    <div className="flex gap-4">
+                        <img src={act} className="w-4"/> 
+                        <span>Actors</span> 
                     </div>
                 )}
                 {props.role.includes("Production Support") && (
                     <div className="flex gap-4">
-                        <img src={Paint} className="w-4"/> 
+                        <img src={prod} className="w-4"/> 
                         <span>Production Support</span> 
                     </div>
                 )}

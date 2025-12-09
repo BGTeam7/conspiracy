@@ -72,7 +72,6 @@ const Home = () => {
                             <img className="scale-110 hover:scale-125 transition-transform" src={file}/>
                         </div>
                     </div>
-                    {/* <p className="text-sm md:text-2xl text-center mt-8">Help Mingo find her family and friends, who are trapped in the pixels of some of your favorite video game levels! Explore new frontiers in your favorite universes, and break the fourth wall as you learn more about the mystery that ties them together - will Mingo rescue all of her loved ones? Does she figure out what's happening in the end? Can she beat the Rainbow Road level? Only one way to find out!</p> */}
                 </div>
             </section>
         </div>
@@ -98,7 +97,7 @@ const Home = () => {
                 </div>
                 <div className="p-10 space-y-10">
                     <div className="flex flex-col md:flex-row gap-4 p-4 border-solid border-2 text-left rounded-tr-3xl rounded-bl-3xl border-purple-400">
-                        <img className="object-cover w-full aspect-[4/3] md:aspect-[3/4]" src={mingo}/>
+                        <img className="object-cover w-full md:w-1/3 aspect-[4/3] md:aspect-[3/4]" src={mingo}/>
                         <div className="space-y-4">
                             <div className="flex justify-around gap-4 items-center bg-[#e372d64e] p-5 rounded-tr-3xl">
                                 <h1 className="uppercase opacity-100 trispace font-semibold text-lg md:text-3xl">mingo</h1>
@@ -166,6 +165,7 @@ const Home = () => {
             <img src={connector} className="mix-blend-overlay self-center"/>
         </div>
         <div className="scanlines mx-8 lg:mx-40">
+            {/* //add web Links */}
             <section className="rounded-bl-3xl rounded-tr-3xl border-solid border-2 border-blue-300 bg-[rgba(57,119,252,0.15)]">
                 <div className="uppercase text-right text-xl sm:text-2xl md:text-5xl px-12 py-4 md:py-8 border-b-solid border-b-2 border-blue-300 gradient rounded-tr-3xl hidden md:flex justify-between items-center">
                     <h3 className="trispace text-left font-medium">our partners</h3>
@@ -182,22 +182,22 @@ const Home = () => {
                     <h3 className="trispace font-medium">our partners</h3>
                 </div>
                 <div className="p-10 text-2xl space-y-10 text-center">
-                    <p>Boundless Gamers is a gaming charity committed to helping kids and others in the gaming community and related organizations. Thank you to our partners for joining us on our mission!</p>
+                    <p>This game is a collaborative effort from game developers and players from all over the world, participating in a volunteer-led, non-profit game for charity! This game is being built to support our charity partners - visit their websites below to learn more about their work.</p>
                     <div className="flex flex-col md:flex-row items-center justify-center gap-10">
                         <div className="partner_border w-max">
-                            <div className="bg-[#1242b1] bg-opacity-50 justify-center md:flex rounded-tr-2xl rounded-bl-2xl">
+                            <a className="bg-[#1242b1] bg-opacity-50 justify-center md:flex rounded-tr-2xl rounded-bl-2xl" href="https://www.extra-life.org/home">
                                 <img className="p-4 hover:scale-110 h-32 2xl:h-52 transition-transform object-contain object-center" src={extra}/>
-                            </div>
+                            </a>
                         </div>
                         <div className="partner_border w-max">
-                            <div className="bg-[#1242b1] bg-opacity-50 justify-center md:flex rounded-tr-2xl rounded-bl-2xl">
+                            <a className="bg-[#1242b1] bg-opacity-50 justify-center md:flex rounded-tr-2xl rounded-bl-2xl " href="https://www.stackup.org/">
                                 <img className=" p-4 hover:scale-110 h-32 2xl:h-52 transition-transform object-contain object-center" src={stackup}/>
-                            </div>
+                            </a>
                         </div>
                         <div className="partner_border w-max">
-                            <div className="bg-[#1242b1] bg-opacity-50 justify-center md:flex rounded-tr-2xl rounded-bl-2xl">
+                            <a className="bg-[#1242b1] bg-opacity-50 justify-center md:flex rounded-tr-2xl rounded-bl-2xl" href="https://gamersoutreach.org/">
                                 <img className="p-4 hover:scale-110 h-32 2xl:h-52 transition-transform object-contain object-center" src={reach}/>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
