@@ -11,6 +11,7 @@ import {
 import Home from "./pages/home"; 
 import TersmOfUse from './pages/termsofuse';
 import Privacy from './pages/privacy';
+import Minigame from './pages/p5_sketches/minigame';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route exact path="/" element={<Home/>}/>
           <Route exact path="/termsofuse" element={<TersmOfUse/>}/>
           <Route exact path="/privacy" element={<Privacy/>}/>
+          <Route exact path="/minigame" element={<Minigame/>}/>
         </Routes>
         <Footer/>
       </Router>
