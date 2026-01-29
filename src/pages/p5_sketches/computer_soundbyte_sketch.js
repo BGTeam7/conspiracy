@@ -1,5 +1,5 @@
 import * as React from "react";
-// import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from "react";
 //GLOBAL VARIABLES
 var radioBase;
 var tone, pitch, distort;
@@ -17,7 +17,7 @@ export default function ComputerSoundByte(p5) {
 
 // A function that runs once at the beginning of the game 
   p5.setup = () => {
-    p5.createCanvas(800, 500);
+    p5.createCanvas(800, 450);
     p5.background(0);
     radioBase = new Radio();
     theta = p5.TWO_PI/3;
