@@ -1,15 +1,15 @@
 //GLOBAL VARIABLES
-var radioBase;
-var tone, pitch, distort;
-var dialogue;
-var sound; // need to load this on setup
+// var radioBase;
+// var tone, pitch, distort;
+// var dialogue;
+// var sound; // need to load this on setup
 
-var radioBase;
+// var radioBase;
 
-let theta;
-let targetAngle = 0.0;
-let currentAngle = 0.0;
-let smoothSpeed = 0.05;
+// let theta;
+// let targetAngle = 0.0;
+// let currentAngle = 0.0;
+// let smoothSpeed = 0.05;
 
 function initSoundByte(p5) {
     p5.createCanvas(800, 450);

@@ -331,7 +331,7 @@ const Team = [
     email: "laynegish@boundlessgamers.org",
     name: "Elaina Gish",
     nickname: "Layne",
-    pronouns: "they/them",
+    pronouns: "",
     photo: "https://drive.google.com/thumbnail?id=1W-ig9E228u_fPLkSsVnQ6rzB78BizxyY",
     team: "Art, Writing",
     role: "Team 3 - Team Lead, Concept Artist, Team 5 - Character Interaction Writer",
